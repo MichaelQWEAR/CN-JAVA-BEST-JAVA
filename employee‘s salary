@@ -1,0 +1,51 @@
+package test;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class InClassProgrammingAssignment2 {
+public static void main(String args[])throws IOException {
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	System.out.println("Welcome to this program");
+	System.out.println("This program is to calculate the working hours and wages of employees and their sum");
+	System.out.println("");
+	int workDay,day;
+	double workHour,hourTotal = 0,salaryPerHour,salaryTotal,hour = 0;
+	String name;
+	final String QUIT="END";
+	do{
+		System.out.println("What is employee's name?");
+		name= br.readLine();
+		System.out.println(name+" how much do you make per hour(decimal allowed)?");
+		salaryPerHour = Double.parseDouble(br.readLine());
+		System.out.println(name+" how many days did you work this week(integer only)?");
+		day=Integer.parseInt(br.readLine());
+		for(workDay=1;workDay<=day;workDay++){
+			System.out.println(name+" how many hours did you work day(decimal allowed)"+workDay+"?");
+			workHour = Double.parseDouble(br.readLine());
+			hourTotal+=workHour;//hourTotal=hourTotal+workHour (add up
+			
+			}
+		hour+=hourTotal;
+		
+		salaryTotal=hourTotal*salaryPerHour;
+		System.out.println("This is "+name+"'s salary:"+salaryTotal);
+		System.out.println("You can enter‘END’to quit (all capital)");
+		System.out.println("And calculate the sum of the hours worked by all employees");
+		System.out.println("Or press‘ENTER’to countinue");
+    	name= br.readLine();
+    	hourTotal=0;
+    	}while(!name.equals(QUIT));
+	System.out.println("This is the total hours work by all of these employees");
+    System.out.println(hour+"hours");
+    System.out.println("This is the end of this program");
+	}// closing of main method		
+}//end of class
+
+
+
+
+
+
+
