@@ -1,0 +1,27 @@
+package HelloWorld;
+
+import java.io.IOException;
+
+public class TheIslandOfMoney {
+
+public static void main(String args[])throws IOException {
+	System.out.println("虽然不知道聘我花了多少钱");
+    System.out.println("可能有中间商赚差价");
+    System.out.println("不过程序就这样开始了");
+    int day;//每次领取相同金额的人数与其领取的金额数 
+    int pplTake$=1;
+    int pplFinal = 1;
+    for(day=1;pplFinal<=1000000;day++){
+    	System.out.println("是第"+day+"轮");
+    	System.out.println("这轮给所有人发了"+day+"元，发了"+day+"个人");	
+    	for(pplTake$=1;pplTake$<=day;pplTake$+=day,pplFinal+=pplTake$) {
+    		System.out.println("已经有"+pplFinal+"个人领了钱");
+    		}
+    	}
+    	System.out.println("当到第1000000人时领取的钱数是"+day+"  "+pplTake$+"个人领了钱");
+	}		
+}
+
+
+//1 2 2 3 3 3 4 4 4 4
+//1 2 3 4 5 6 7 8 9 10 ... 
