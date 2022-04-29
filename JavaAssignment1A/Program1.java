@@ -51,7 +51,8 @@ public class Program1 {//class header
 		System.out.println ("This is a DigitDisplay application");//UFP
 		System.out.println ("You can enter a non-negative integer ");//UFP
 		System.out.println ("Then display each number on a separate line");//UFP
-		System.out.println ("And choose to display left-to-right or right-to-left.");//UFP
+		System.out.println ("And choose to display ");
+		System.out.println ("left-to-right / right-to-left / low-to-high / high-to-low.");//UFP
 		System.out.println ("Enter a positive integer: ");//UFP
 		doubleNumber = Double.parseDouble(br.readLine());//Accept input convert to integer value and store value in variable name intNumber
 		do{//Start do while loop
